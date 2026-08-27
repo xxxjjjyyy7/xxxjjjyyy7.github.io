@@ -33,7 +33,7 @@
             --radius-sm: 12px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-            --max-width: 1100px;
+            --max-width: 1200px;
             --nav-height: 60px;
             --gradient-hero: linear-gradient(145deg, #EDE6F5 0%, #DCD0E8 50%, #E4DAEE 100%);
             --card-big-gradient: linear-gradient(135deg, #1A0F2E, #3A2A5E);
@@ -503,49 +503,6 @@
             color: var(--secondary);
         }
 
-        @media (min-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-                text-align: left;
-                gap: 48px;
-            }
-            .hero-content .summary {
-                margin-left: 0;
-            }
-            .hero-tags {
-                justify-content: flex-start;
-            }
-            .hero-actions {
-                justify-content: flex-start;
-            }
-            .hero-contact-mini {
-                justify-content: flex-start;
-            }
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            .hero-visual .avatar-img {
-                width: 200px;
-                height: 200px;
-            }
-            .hero {
-                padding: 60px 0 48px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 1.8rem;
-            }
-            .hero-visual .avatar-img {
-                width: 120px;
-                height: 120px;
-            }
-            .hero-content .summary {
-                font-size: 0.9rem;
-            }
-        }
-
         /* ===== Section Common ===== */
         .section {
             padding: 40px 0;
@@ -673,53 +630,6 @@
             grid-row: 2 / 3;
         }
 
-        @media (max-width: 600px) {
-            .highlights-grid {
-                gap: 12px;
-                max-width: 100%;
-            }
-            .highlight-circle {
-                max-width: 100px;
-                padding: 8px;
-            }
-            .highlight-circle.big {
-                max-width: 120px;
-            }
-            .highlight-circle .number {
-                font-size: 1.2rem;
-            }
-            .highlight-circle.big .number {
-                font-size: 2rem;
-            }
-            .highlight-circle .label {
-                font-size: 0.7rem;
-            }
-            .highlight-circle .desc {
-                font-size: 0.55rem;
-            }
-        }
-        @media (max-width: 480px) {
-            .highlight-circle {
-                max-width: 80px;
-                padding: 6px;
-            }
-            .highlight-circle.big {
-                max-width: 100px;
-            }
-            .highlight-circle .number {
-                font-size: 1rem;
-            }
-            .highlight-circle.big .number {
-                font-size: 1.6rem;
-            }
-            .highlight-circle .label {
-                font-size: 0.6rem;
-            }
-            .highlight-circle .desc {
-                display: none;
-            }
-        }
-
         /* ===== Experience — 两个独立卡片 ===== */
         .experience-grid {
             display: grid;
@@ -795,13 +705,6 @@
             top: 6px;
         }
 
-        @media (min-width: 768px) {
-            .experience-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 28px;
-            }
-        }
-
         /* ===== Skills — 横向条 ===== */
         .skills-wrapper {
             display: grid;
@@ -866,13 +769,6 @@
             text-align: right;
         }
 
-        @media (min-width: 600px) {
-            .skills-wrapper {
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                gap: 24px;
-            }
-        }
-
         /* ===== 领域与兴趣（独立） ===== */
         .interests-section {
             background: var(--bg-card);
@@ -913,7 +809,7 @@
             transform: translateY(-2px);
         }
 
-        /* ===== 证书卡片（含点击查看照片） ===== */
+        /* ===== 证书卡片 ===== */
         .certs-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1087,235 +983,6 @@
             animation-play-state: paused;
         }
 
-        @media (min-width: 600px) {
-            .certs-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            .photo-3d {
-                width: 140px;
-                height: 190px;
-            }
-            .photo-3d img {
-                width: 140px;
-                height: 190px;
-            }
-            .photo-3d img:first-child {
-                transform: rotateY(0deg) translateZ(110px);
-            }
-            .photo-3d img:last-child {
-                transform: rotateY(180deg) translateZ(110px);
-            }
-            .photo-3d-wrapper {
-                min-height: 190px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .photo-3d {
-                width: 80px;
-                height: 110px;
-            }
-            .photo-3d img {
-                width: 80px;
-                height: 110px;
-            }
-            .photo-3d img:first-child {
-                transform: rotateY(0deg) translateZ(64px);
-            }
-            .photo-3d img:last-child {
-                transform: rotateY(180deg) translateZ(64px);
-            }
-            .photo-3d-wrapper {
-                min-height: 110px;
-            }
-        }
-
-        /* ===== AI 助手萌宠 ===== */
-        .ai-assistant {
-            position: fixed;
-            bottom: 100px;
-            right: 16px;
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .ai-toggle {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: var(--card-big-gradient);
-            border: 3px solid var(--secondary-light);
-            box-shadow: 0 8px 32px rgba(26, 15, 46, 0.35);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.4rem;
-            transition: all var(--transition);
-            touch-action: manipulation;
-            user-select: none;
-            animation: float 3s ease-in-out infinite;
-        }
-        .ai-toggle:hover {
-            transform: scale(1.08);
-        }
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        .ai-chatbox {
-            display: none;
-            width: 300px;
-            max-width: 85vw;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            box-shadow: 0 16px 48px rgba(26, 15, 46, 0.25);
-            border: 1px solid var(--border);
-            overflow: hidden;
-            margin-bottom: 12px;
-            animation: slideUp 0.3s ease;
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.95);
-            [data-theme="dark"] & {
-                background: rgba(26, 17, 40, 0.95);
-            }
-        }
-        .ai-chatbox.open {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @keyframes slideUp {
-            0% {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .ai-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 16px;
-            background: var(--primary);
-            color: #fff;
-            border-bottom: 1px solid var(--border);
-        }
-        .ai-header span {
-            font-weight: 600;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .ai-close {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0 4px;
-        }
-
-        .ai-messages {
-            padding: 12px 16px;
-            max-height: 260px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            scroll-behavior: smooth;
-        }
-        .ai-msg {
-            padding: 8px 14px;
-            border-radius: 18px;
-            max-width: 80%;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            word-break: break-word;
-        }
-        .ai-msg.bot {
-            background: var(--border);
-            color: var(--text);
-            align-self: flex-start;
-            border-bottom-left-radius: 4px;
-        }
-        .ai-msg.user {
-            background: var(--secondary);
-            color: #fff;
-            align-self: flex-end;
-            border-bottom-right-radius: 4px;
-        }
-
-        .ai-input-area {
-            display: flex;
-            gap: 8px;
-            padding: 10px 12px;
-            border-top: 1px solid var(--border);
-            background: var(--bg-card);
-        }
-        .ai-input-area input {
-            flex: 1;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            padding: 8px 14px;
-            font-size: 0.9rem;
-            outline: none;
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--font);
-            min-height: 40px;
-        }
-        .ai-input-area input:focus {
-            border-color: var(--secondary);
-        }
-        .ai-input-area button {
-            background: var(--secondary);
-            color: #fff;
-            border: none;
-            border-radius: 999px;
-            padding: 0 18px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all var(--transition);
-            white-space: nowrap;
-            min-height: 40px;
-        }
-        .ai-input-area button:hover {
-            background: var(--secondary-dark);
-        }
-
-        /* 响应式 AI 窗口 */
-        @media (max-width: 480px) {
-            .ai-assistant {
-                bottom: 80px;
-                right: 10px;
-            }
-            .ai-toggle {
-                width: 56px;
-                height: 56px;
-                font-size: 2rem;
-            }
-            .ai-chatbox {
-                width: 280px;
-                max-width: 80vw;
-            }
-        }
-
         /* ===== Footer ===== */
         .footer {
             padding: 24px 0 16px;
@@ -1356,155 +1023,438 @@
             color: #0f172a;
         }
 
-        /* ===== Print ===== */
-        @media print {
-            #petalCanvas {
-                display: none !important;
+        /* ================================================================
+               DESKTOP ENHANCEMENTS
+            ================================================================ */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 40px;
             }
-            .navbar,
-            .scroll-top,
-            .hero-actions .btn-outline,
-            .nav-btn,
-            .ai-assistant {
-                display: none !important;
+
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                text-align: left;
+                gap: 60px;
             }
-            body {
-                padding-top: 0 !important;
-                background: #fff !important;
-                color: #000 !important;
+            .hero-content .summary {
+                margin-left: 0;
+                max-width: 600px;
             }
-            body::before,
-            body::after {
-                display: none !important;
+            .hero-tags {
+                justify-content: flex-start;
             }
-            .hero {
-                background: #f5f5f5 !important;
-                padding: 32px 0 !important;
-                border-bottom: 2px solid #ddd !important;
+            .hero-actions {
+                justify-content: flex-start;
             }
-            .hero-content h1 .highlight {
-                -webkit-text-fill-color: #1A0F2E !important;
-                background: none !important;
+            .hero-contact-mini {
+                justify-content: flex-start;
             }
             .hero-visual .avatar-img {
-                border-color: #8B6BB0 !important;
-                box-shadow: none !important;
+                width: 220px;
+                height: 220px;
             }
-            .section {
-                padding: 24px 0 !important;
-                border-bottom: 1px solid #ddd !important;
-                page-break-inside: avoid;
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .highlights-grid {
+                max-width: 900px;
+                gap: 30px;
             }
             .highlight-circle {
-                border: 1px solid #ccc !important;
-                background: #fafafa !important;
-                box-shadow: none !important;
+                max-width: 180px;
+                padding: 20px;
             }
             .highlight-circle.big {
-                background: #1A0F2E !important;
-                color: #fff !important;
+                max-width: 220px;
             }
             .highlight-circle .number {
-                color: #8B6BB0 !important;
+                font-size: 2.2rem;
             }
             .highlight-circle.big .number {
-                color: #fff !important;
+                font-size: 3.2rem;
             }
-            .skill-bar .fill {
-                background: #8B6BB0 !important;
+            .highlight-circle .label {
+                font-size: 1rem;
             }
-            .exp-card {
-                border: 1px solid #ddd !important;
-                box-shadow: none !important;
-                background: #fafafa !important;
+            .highlight-circle .desc {
+                font-size: 0.8rem;
             }
-            .exp-card::before {
-                background: #8B6BB0 !important;
+
+            .experience-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
             }
-            .cert-item {
-                border-color: #ddd !important;
-                background: #fafafa !important;
+
+            .skills-wrapper {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
             }
-            .photo-container {
-                display: flex !important;
-                border-top-color: #ddd !important;
+
+            .certs-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
             }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .section-desc {
+                font-size: 1rem;
+            }
+
             .photo-3d {
-                animation: none !important;
-                transform: rotateY(0deg) !important;
+                width: 160px;
+                height: 210px;
             }
             .photo-3d img {
-                position: relative !important;
-                transform: none !important;
-                backface-visibility: visible !important;
-                width: 80px !important;
-                height: 110px !important;
-                margin: 0 8px !important;
+                width: 160px;
+                height: 210px;
             }
             .photo-3d img:first-child {
-                transform: none !important;
+                transform: rotateY(0deg) translateZ(130px);
             }
             .photo-3d img:last-child {
-                transform: none !important;
+                transform: rotateY(180deg) translateZ(130px);
             }
             .photo-3d-wrapper {
-                perspective: none !important;
-                min-height: auto !important;
+                min-height: 210px;
             }
-            .view-photos-btn {
-                display: none !important;
-            }
-            .btn-primary {
-                background: #8B6BB0 !important;
-                color: #fff !important;
-                box-shadow: none !important;
-            }
-            .hero-contact-mini a {
-                color: #333 !important;
-            }
-            .container {
-                max-width: 100% !important;
-                padding: 0 20px !important;
-            }
-            .experience-grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 20px !important;
-            }
-            .skills-wrapper {
-                grid-template-columns: repeat(3, 1fr) !important;
-            }
-            [data-theme="dark"] .navbar {
-                background: #fff !important;
-                border-color: #ddd !important;
-            }
-            .navbar-brand {
-                color: #1A0F2E !important;
-            }
-            .interests-section {
-                border: 1px solid #ddd !important;
-                background: #fafafa !important;
+            .photo-single img {
+                max-height: 240px;
             }
         }
 
+        /* ================================================================
+           AI 侧边栏样式 (右侧)
+           ================================================================ */
+        #ai-float-btn {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9998;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(106, 17, 203, 0.4);
+            animation: pulse-animation 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        .btn-content {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px 0 0 30px;
+            box-shadow: -4px 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            right: 0;
+        }
+        .btn-content svg { width: 24px; height: 24px; }
+        .btn-label { font-weight: bold; font-size: 16px; }
+
+        #ai-float-btn:hover .btn-content {
+            padding-right: 30px;
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        }
+
+        #ai-sidebar {
+            position: fixed;
+            top: 5%;
+            bottom: 5%;
+            right: -70vw;
+            width: 66vw;
+            background: var(--bg-card);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+            z-index: 9999;
+            transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px 0 0 20px;
+            overflow: hidden;
+        }
+        [data-theme="dark"] #ai-sidebar { background: var(--bg-card); }
+
+        #ai-sidebar.active { right: 0; }
+
+        .ai-header {
+            height: 60px;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;
+            flex-shrink: 0;
+        }
+        .ai-header .header-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            font-size: 1rem;
+        }
+        .ai-header .header-title strong { color: var(--primary); }
+
+        .ai-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1;
+            transition: color var(--transition);
+        }
+        .ai-close:hover { color: #e74c3c; }
+
+        #ai-iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+            background: var(--bg);
+        }
+
+        #ai-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9990;
+            display: none;
+            backdrop-filter: blur(3px);
+        }
+        #ai-overlay.active { display: block; }
+
+        @media (max-width: 768px) {
+            #ai-sidebar { width: 100%; top: 0; bottom: 0; border-radius: 0; right: -100%; }
+            .btn-label { display: none; }
+            .btn-content { padding: 15px; border-radius: 50%; right: 10px; }
+            .pulse-ring { right: 6px; width: 44px; height: 44px; }
+        }
+
+        /* ================================================================
+           萌宠 AI 助手 (左下角)
+           ================================================================ */
+        .ai-pet {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 9997;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .ai-pet .pet-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--card-big-gradient);
+            border: 3px solid var(--secondary-light);
+            box-shadow: 0 8px 32px rgba(26, 15, 46, 0.35);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            transition: all var(--transition);
+            touch-action: manipulation;
+            user-select: none;
+            animation: float 3s ease-in-out infinite;
+        }
+        .ai-pet .pet-toggle:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .ai-pet .pet-chatbox {
+            display: none;
+            width: 280px;
+            max-width: 70vw;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: 0 16px 48px rgba(26, 15, 46, 0.25);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 12px;
+            animation: slideUp 0.3s ease;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        [data-theme="dark"] .ai-pet .pet-chatbox {
+            background: rgba(26, 17, 40, 0.95);
+        }
+        .ai-pet .pet-chatbox.open { display: flex; flex-direction: column; }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(16px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .pet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--primary);
+            color: #fff;
+            border-bottom: 1px solid var(--border);
+        }
+        .pet-header span {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pet-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+
+        .pet-messages {
+            padding: 10px 14px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            scroll-behavior: smooth;
+        }
+        .pet-msg {
+            padding: 6px 12px;
+            border-radius: 18px;
+            max-width: 80%;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        .pet-msg.bot {
+            background: var(--border);
+            color: var(--text);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .pet-msg.user {
+            background: var(--secondary);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .pet-input-area {
+            display: flex;
+            gap: 6px;
+            padding: 8px 12px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+        .pet-input-area input {
+            flex: 1;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            outline: none;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            min-height: 36px;
+        }
+        .pet-input-area input:focus { border-color: var(--secondary); }
+        .pet-input-area button {
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 0 14px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+            min-height: 36px;
+        }
+        .pet-input-area button:hover { background: var(--secondary-dark); }
+
+        @media (max-width: 640px) {
+            .ai-pet { bottom: 16px; left: 16px; }
+            .ai-pet .pet-toggle { width: 50px; height: 50px; font-size: 1.8rem; }
+            .ai-pet .pet-chatbox { width: 260px; max-width: 80vw; }
+        }
+
+        @media print {
+            #ai-float-btn, #ai-sidebar, #ai-overlay, .ai-pet { display: none !important; }
+        }
+
+        /* ===== Print overrides ===== */
+        @media print {
+            #petalCanvas { display: none !important; }
+            .navbar, .scroll-top, .hero-actions .btn-outline, .nav-btn,
+            #ai-float-btn, #ai-sidebar, #ai-overlay, .ai-pet { display: none !important; }
+            body { padding-top: 0 !important; background: #fff !important; color: #000 !important; }
+            body::before, body::after { display: none !important; }
+            .hero { background: #f5f5f5 !important; padding: 32px 0 !important; border-bottom: 2px solid #ddd !important; }
+            .hero-content h1 .highlight { -webkit-text-fill-color: #1A0F2E !important; background: none !important; }
+            .hero-visual .avatar-img { border-color: #8B6BB0 !important; box-shadow: none !important; }
+            .section { padding: 24px 0 !important; border-bottom: 1px solid #ddd !important; page-break-inside: avoid; }
+            .highlight-circle { border: 1px solid #ccc !important; background: #fafafa !important; box-shadow: none !important; }
+            .highlight-circle.big { background: #1A0F2E !important; color: #fff !important; }
+            .highlight-circle .number { color: #8B6BB0 !important; }
+            .highlight-circle.big .number { color: #fff !important; }
+            .skill-bar .fill { background: #8B6BB0 !important; }
+            .exp-card { border: 1px solid #ddd !important; box-shadow: none !important; background: #fafafa !important; }
+            .exp-card::before { background: #8B6BB0 !important; }
+            .cert-item { border-color: #ddd !important; background: #fafafa !important; }
+            .photo-container { display: flex !important; border-top-color: #ddd !important; }
+            .photo-3d { animation: none !important; transform: rotateY(0deg) !important; }
+            .photo-3d img { position: relative !important; transform: none !important; backface-visibility: visible !important; width: 80px !important; height: 110px !important; margin: 0 8px !important; }
+            .photo-3d img:first-child { transform: none !important; }
+            .photo-3d img:last-child { transform: none !important; }
+            .photo-3d-wrapper { perspective: none !important; min-height: auto !important; }
+            .view-photos-btn { display: none !important; }
+            .btn-primary { background: #8B6BB0 !important; color: #fff !important; box-shadow: none !important; }
+            .hero-contact-mini a { color: #333 !important; }
+            .container { max-width: 100% !important; padding: 0 20px !important; }
+            .experience-grid { grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+            .skills-wrapper { grid-template-columns: repeat(3, 1fr) !important; }
+            [data-theme="dark"] .navbar { background: #fff !important; border-color: #ddd !important; }
+            .navbar-brand { color: #1A0F2E !important; }
+            .interests-section { border: 1px solid #ddd !important; background: #fafafa !important; }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-            html {
-                scroll-behavior: auto !important;
-            }
-            .photo-3d {
-                animation: none !important;
-            }
-            .photo-3d-wrapper:hover .photo-3d {
-                animation-play-state: running !important;
-            }
-            .ai-toggle {
-                animation: none !important;
-            }
+            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+            html { scroll-behavior: auto !important; }
+            .photo-3d { animation: none !important; }
+            .photo-3d-wrapper:hover .photo-3d { animation-play-state: running !important; }
+            .pulse-ring { animation: none !important; }
+            .ai-pet .pet-toggle { animation: none !important; }
         }
     </style>
 </head>
@@ -1556,27 +1506,48 @@
     <!-- ===== Scroll Top ===== -->
     <button class="scroll-top" id="scrollTop" aria-label="返回顶部" title="返回顶部">↑</button>
 
-    <!-- ===== AI 助手萌宠 ===== -->
-    <div class="ai-assistant" id="aiAssistant">
-        <div class="ai-chatbox" id="aiChatbox">
-            <div class="ai-header">
+    <!-- ===== AI 侧边栏 (右侧) ===== -->
+    <div id="ai-float-btn" class="ai-pulse" title="点击展开 AI 助理">
+        <span class="pulse-ring"></span>
+        <div class="btn-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span class="btn-label">AI 助理</span>
+        </div>
+    </div>
+    <div id="ai-overlay"></div>
+    <div id="ai-sidebar">
+        <div class="ai-header">
+            <div class="header-title">
+                <span style="font-size:1.2rem;">🤖</span>
+                <strong>小言的专属 AI 助理</strong>
+            </div>
+            <button id="ai-close-btn" class="ai-close">&times;</button>
+        </div>
+        <iframe id="ai-iframe" src="https://runtime.mobiapp.cloud/178772507209039/apps/178773540276854/" allow="microphone" loading="lazy"></iframe>
+    </div>
+
+    <!-- ===== 萌宠 AI 助手 (左下角) ===== -->
+    <div class="ai-pet" id="aiPet">
+        <div class="pet-chatbox" id="petChatbox">
+            <div class="pet-header">
                 <span>🐾 小紫助手</span>
-                <button class="ai-close" id="aiClose">✕</button>
+                <button class="pet-close" id="petClose">✕</button>
             </div>
-            <div class="ai-messages" id="aiMessages">
-                <div class="ai-msg bot">你好呀！我是小紫，有什么可以帮你的吗？😊</div>
+            <div class="pet-messages" id="petMessages">
+                <div class="pet-msg bot">你好呀！我是小紫，有什么可以帮你的吗？😊</div>
             </div>
-            <div class="ai-input-area">
-                <input type="text" id="aiInput" placeholder="输入消息..." />
-                <button id="aiSend">发送</button>
+            <div class="pet-input-area">
+                <input type="text" id="petInput" placeholder="输入消息..." />
+                <button id="petSend">发送</button>
             </div>
         </div>
-        <div class="ai-toggle" id="aiToggle" role="button" aria-label="打开AI助手">🐱</div>
+        <div class="pet-toggle" id="petToggle" role="button" aria-label="打开萌宠助手">🐱</div>
     </div>
 
     <!-- ===== Main ===== -->
     <main>
-
         <!-- ===== HERO ===== -->
         <section class="hero" id="hero">
             <div class="container hero-grid">
@@ -1588,9 +1559,7 @@
                         组织协调能力突出；初中担任物理课代表，实验操作严谨细致。性格谨慎细心，善于逻辑分析
                         与多任务并行处理，致力于在电气工程与信息技术交叉领域持续深耕。
                     </p>
-                    <div class="hero-tags" id="heroTags">
-                        <!-- rendered by JS -->
-                    </div>
+                    <div class="hero-tags" id="heroTags"></div>
                     <div class="hero-actions">
                         <button class="btn-primary" id="copyWechatBtn" aria-label="复制微信号">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1601,9 +1570,7 @@
                         </button>
                         <a href="#contact" class="btn-outline" style="text-decoration:none;">联系方式 ↓</a>
                     </div>
-                    <div class="hero-contact-mini" id="heroContactMini">
-                        <!-- rendered by JS -->
-                    </div>
+                    <div class="hero-contact-mini" id="heroContactMini"></div>
                 </div>
                 <div class="hero-visual">
                     <img src="zhao.jpg" alt="谢佳言写真" class="avatar-img" loading="lazy" />
@@ -1616,9 +1583,7 @@
             <div class="container">
                 <h2 class="section-title">✨ 亮点成果 <span class="badge">关键数据</span></h2>
                 <p class="section-desc">核心能力与荣誉的量化呈现，快速了解我的竞争力。</p>
-                <div class="highlights-grid" id="highlightsGrid">
-                    <!-- rendered by JS -->
-                </div>
+                <div class="highlights-grid" id="highlightsGrid"></div>
             </div>
         </section>
 
@@ -1627,9 +1592,7 @@
             <div class="container">
                 <h2 class="section-title">📋 班干部经历 <span class="badge">校园实践</span></h2>
                 <p class="section-desc">连续多年担任课代表，积累丰富的组织协调与沟通能力。</p>
-                <div class="experience-grid" id="experienceGrid">
-                    <!-- rendered by JS -->
-                </div>
+                <div class="experience-grid" id="experienceGrid"></div>
             </div>
         </section>
 
@@ -1638,21 +1601,17 @@
             <div class="container">
                 <h2 class="section-title">🧠 技能矩阵 <span class="badge">横向评估</span></h2>
                 <p class="section-desc">语言、工具与核心素养的直观可视化。</p>
-                <div class="skills-wrapper" id="skillsWrapper">
-                    <!-- rendered by JS -->
-                </div>
+                <div class="skills-wrapper" id="skillsWrapper"></div>
             </div>
         </section>
 
-        <!-- ===== 领域与兴趣（独立） ===== -->
+        <!-- ===== 领域与兴趣 ===== -->
         <section class="section" id="interests">
             <div class="container">
                 <div class="interests-section">
                     <h2 class="section-title">🌟 领域与兴趣 <span class="badge">个人志趣</span></h2>
                     <p class="section-desc">学术方向与日常爱好，展现多维度的自我。</p>
-                    <div class="interests-tags" id="interestsTags">
-                        <!-- rendered by JS -->
-                    </div>
+                    <div class="interests-tags" id="interestsTags"></div>
                 </div>
             </div>
         </section>
@@ -1662,9 +1621,7 @@
             <div class="container">
                 <h2 class="section-title">🏆 获奖与证书 <span class="badge">荣誉认证</span></h2>
                 <p class="section-desc">学术竞赛与专业认证，点击「查看照片」可浏览证书影像。</p>
-                <div class="certs-grid" id="certsGrid">
-                    <!-- rendered by JS -->
-                </div>
+                <div class="certs-grid" id="certsGrid"></div>
             </div>
         </section>
 
@@ -1675,21 +1632,14 @@
                     <strong>谢佳言</strong> &nbsp;·&nbsp; 电话 <a href="tel:19923447286">19923447286</a>
                     &nbsp;·&nbsp; 微信 <span id="footerWechat">xxx1717yyy</span>
                 </p>
-                <p>
-                    <span>📍 四川·成都</span>
-                    <span>·</span>
-                    <span>更新于 2026 年 8 月</span>
-                    <span>·</span>
-                    <span>© 谢佳言</span>
-                </p>
+                <p><span>📍 四川·成都</span> <span>·</span> <span>更新于 2026 年 8 月</span> <span>·</span> <span>© 谢佳言</span></p>
             </div>
         </footer>
-
     </main>
 
     <script>
         // ================================================================
-        //  花瓣飘落动画 (Canvas) — 移动端优化
+        //  花瓣飘落动画
         // ================================================================
         (function petalAnimation() {
             const canvas = document.getElementById('petalCanvas');
@@ -1697,32 +1647,17 @@
             let width, height;
             let petals = [];
             const isMobile = window.innerWidth < 768;
-            const PETAL_COUNT = isMobile ? 30 : 50;
-            const colors = [
-                'rgba(139, 107, 176, 0.5)',
-                'rgba(184, 159, 212, 0.45)',
-                'rgba(159, 126, 186, 0.5)',
-                'rgba(106, 74, 138, 0.4)',
-                'rgba(200, 180, 220, 0.35)'
-            ];
-
-            function resize() {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                canvas.width = width;
-                canvas.height = height;
-            }
+            const PETAL_COUNT = isMobile ? 30 : (window.innerWidth < 1024 ? 45 : 60);
+            const colors = ['rgba(139,107,176,0.5)','rgba(184,159,212,0.45)','rgba(159,126,186,0.5)','rgba(106,74,138,0.4)','rgba(200,180,220,0.35)'];
+            function resize() { width = window.innerWidth; height = window.innerHeight; canvas.width = width; canvas.height = height; }
             window.addEventListener('resize', resize);
-
             class Petal {
-                constructor() {
-                    this.reset();
-                }
+                constructor() { this.reset(); }
                 reset() {
                     this.x = Math.random() * width;
                     this.y = Math.random() * -height - 20;
-                    this.size = 6 + Math.random() * 10;
-                    this.speedY = 0.5 + Math.random() * 1.0;
+                    this.size = 6 + Math.random() * (isMobile ? 10 : 14);
+                    this.speedY = 0.5 + Math.random() * (isMobile ? 1.0 : 1.4);
                     this.speedX = -0.2 + Math.random() * 0.4;
                     this.rotation = Math.random() * 2 * Math.PI;
                     this.rotSpeed = (Math.random() - 0.5) * 0.02;
@@ -1733,10 +1668,7 @@
                     this.y += this.speedY;
                     this.x += this.speedX + Math.sin(this.y * 0.01) * 0.15;
                     this.rotation += this.rotSpeed;
-                    if (this.y > height + 30) {
-                        this.reset();
-                        this.y = -20 - Math.random() * 30;
-                    }
+                    if (this.y > height + 30) { this.reset(); this.y = -20 - Math.random() * 30; }
                     if (this.x < -30) this.x = width + 20;
                     if (this.x > width + 30) this.x = -20;
                 }
@@ -1762,36 +1694,16 @@
                     ctx.restore();
                 }
             }
-
-            function initPetals() {
-                for (let i = 0; i < PETAL_COUNT; i++) {
-                    const p = new Petal();
-                    p.y = Math.random() * height;
-                    petals.push(p);
-                }
-            }
-
+            function initPetals() { for (let i = 0; i < PETAL_COUNT; i++) { const p = new Petal(); p.y = Math.random() * height; petals.push(p); } }
             let animFrameId = null;
-
             function animate() {
                 ctx.clearRect(0, 0, width, height);
-                petals.forEach(p => {
-                    p.update();
-                    p.draw();
-                });
+                petals.forEach(p => { p.update(); p.draw(); });
                 animFrameId = requestAnimationFrame(animate);
             }
-
-            resize();
-            initPetals();
-            animate();
-
+            resize(); initPetals(); animate();
             document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    if (animFrameId) cancelAnimationFrame(animFrameId);
-                } else {
-                    animate();
-                }
+                if (document.hidden) { if (animFrameId) cancelAnimationFrame(animFrameId); } else { animate(); }
             });
         })();
 
@@ -1801,265 +1713,148 @@
         const resume = {
             name: '谢佳言',
             title: '西华大学 · 电气工程及其自动化 准大一新生',
-            contact: {
-                phone: '19923447286',
-                wechat: 'xxx1717yyy',
-                address: '四川·成都'
-            },
+            contact: { phone: '19923447286', wechat: 'xxx1717yyy', address: '四川·成都' },
             hero: {
                 summary: '高考英语成绩优秀，具备扎实的语言基础与快速学习能力。高中连续三年担任英语课代表，组织协调能力突出；初中担任物理课代表，实验操作严谨细致。性格谨慎细心，善于逻辑分析与多任务并行处理，致力于在电气工程与信息技术交叉领域持续深耕。',
                 tags: ['西华大学', '英语优秀', 'Office 熟练', 'C语言 入门', '逻辑分析', '团队协作', '羽毛球']
             },
-            highlights: [{
-                number: '优秀',
-                label: '高考英语',
-                desc: '扎实功底'
-            }, {
-                number: '300+',
-                label: '早读场次',
-                desc: '三年组织'
-            }, {
-                number: '0',
-                label: '实验事故',
-                desc: '安全零事故'
-            }, {
-                number: '二等奖',
-                label: '生物多样性',
-                desc: '重庆市'
-            }, {
-                number: '二等奖',
-                label: '物理模型',
-                desc: '高中组'
-            }],
-            experiences: [{
-                title: '英语课代表',
-                org: '高中 · 连续三年',
-                icon: '📚',
-                points: [
-                    '负责晨读与课堂任务协调，组织早读，完成作业收集。',
-                    '协助老师整理专项练习，定期收集同学学习难点并反馈，推动针对性复习。'
-                ]
-            }, {
-                title: '物理课代表',
-                org: '初中',
-                icon: '⚛️',
-                points: [
-                    '协同老师准备器材与小组任务分配，独立负责作业登记与成绩统计。',
-                    '精准分析学情并反馈给老师，帮助同学提升成绩。'
-                ]
-            }],
+            highlights: [
+                { number: '优秀', label: '高考英语', desc: '扎实功底' },
+                { number: '300+', label: '早读场次', desc: '三年组织' },
+                { number: '0', label: '实验事故', desc: '安全零事故' },
+                { number: '二等奖', label: '生物多样性', desc: '重庆市' },
+                { number: '二等奖', label: '物理模型', desc: '高中组' }
+            ],
+            experiences: [
+                {
+                    title: '英语课代表',
+                    org: '高中 · 连续三年',
+                    icon: '📚',
+                    points: [
+                        '负责晨读与课堂任务协调，组织早读，完成作业收集。',
+                        '协助老师整理专项练习，定期收集同学学习难点并反馈，推动针对性复习。'
+                    ]
+                },
+                {
+                    title: '物理课代表',
+                    org: '初中',
+                    icon: '⚛️',
+                    points: [
+                        '协同老师准备器材与小组任务分配，独立负责作业登记与成绩统计。',
+                        '精准分析学情并反馈给老师，帮助同学提升成绩。'
+                    ]
+                }
+            ],
             skills: {
-                languages: [
-                    { name: '英语', level: 92 },
-                    { name: '中文', level: 100 }
-                ],
-                tools: [
-                    { name: 'Office', level: 85 },
-                    { name: 'C 语言', level: 50 }
-                ],
-                competencies: [
-                    { name: '逻辑分析', level: 85 },
-                    { name: '细节把控', level: 90 },
-                    { name: '团队协作', level: 80 },
-                    { name: '快速学习', level: 85 }
-                ]
+                languages: [{ name: '英语', level: 92 }, { name: '中文', level: 100 }],
+                tools: [{ name: 'Office', level: 85 }, { name: 'C 语言', level: 50 }],
+                competencies: [{ name: '逻辑分析', level: 85 }, { name: '细节把控', level: 90 }, { name: '团队协作', level: 80 }, { name: '快速学习', level: 85 }]
             },
             interests: ['电气工程', '英语应用', '实验操作', '项目管理', '数据分析', '🏸 羽毛球'],
-            certificates: [{
-                name: 'AI 证书',
-                source: '人工智能基础认证',
-                images: ['ai.jpg', 'aizhengshu.jpg']
-            }, {
-                name: '生物多样性调查 重庆市二等奖',
-                source: '市级竞赛',
-                images: ['shengwuduoyangxing.jpg']
-            }, {
-                name: '物理模型制作大赛 高中组二等奖',
-                source: '校级竞赛',
-                images: ['wulimoxing.jpg']
-            }, {
-                name: '征文比赛 年级三等奖',
-                source: '校级',
-                images: ['zhengwen.jpg']
-            }]
+            certificates: [
+                { name: 'AI 证书', source: '人工智能基础认证', images: ['ai.jpg', 'aizhengshu.jpg'] },
+                { name: '生物多样性调查 重庆市二等奖', source: '市级竞赛', images: ['shengwuduoyangxing.jpg'] },
+                { name: '物理模型制作大赛 高中组二等奖', source: '校级竞赛', images: ['wulimoxing.jpg'] },
+                { name: '征文比赛 年级三等奖', source: '校级', images: ['zhengwen.jpg'] }
+            ]
         };
 
         // ================================================================
-        //  RENDER FUNCTIONS
+        //  RENDER
         // ================================================================
-
         function renderHeroTags() {
-            const container = document.getElementById('heroTags');
-            container.innerHTML = resume.hero.tags.map(t =>
-                `<span class="tag">${t}</span>`
-            ).join('');
+            document.getElementById('heroTags').innerHTML = resume.hero.tags.map(t => `<span class="tag">${t}</span>`).join('');
         }
-
         function renderHeroContactMini() {
-            const container = document.getElementById('heroContactMini');
             const c = resume.contact;
-            container.innerHTML = `
+            document.getElementById('heroContactMini').innerHTML = `
                 <a href="tel:${c.phone}">📞 ${c.phone}</a>
                 <a href="#">💬 ${c.wechat}</a>
                 <span>📍 ${c.address}</span>
             `;
         }
-
         function renderHighlights() {
-            const container = document.getElementById('highlightsGrid');
             const items = resume.highlights;
             if (!items.length) return;
             const big = items[0];
             const smalls = items.slice(1);
-            const positions = ['pos-tl', 'pos-tr', 'pos-bl', 'pos-br'];
-            let html = `
-                <div class="highlight-circle big">
-                    <div class="number">${big.number}</div>
-                    <div class="label">${big.label}</div>
-                    <div class="desc">${big.desc}</div>
-                </div>
-            `;
-            smalls.forEach((h, i) => {
-                html += `
-                    <div class="highlight-circle ${positions[i % positions.length]}">
-                        <div class="number">${h.number}</div>
-                        <div class="label">${h.label}</div>
-                        <div class="desc">${h.desc}</div>
-                    </div>
-                `;
+            const positions = ['pos-tl','pos-tr','pos-bl','pos-br'];
+            let html = `<div class="highlight-circle big"><div class="number">${big.number}</div><div class="label">${big.label}</div><div class="desc">${big.desc}</div></div>`;
+            smalls.forEach((h,i) => {
+                html += `<div class="highlight-circle ${positions[i%4]}"><div class="number">${h.number}</div><div class="label">${h.label}</div><div class="desc">${h.desc}</div></div>`;
             });
-            container.innerHTML = html;
+            document.getElementById('highlightsGrid').innerHTML = html;
         }
-
         function renderExperience() {
-            const container = document.getElementById('experienceGrid');
-            container.innerHTML = resume.experiences.map(exp => `
+            document.getElementById('experienceGrid').innerHTML = resume.experiences.map(exp => `
                 <div class="exp-card">
-                    <div class="card-title">
-                        <span class="icon">${exp.icon}</span>
-                        ${exp.title}
-                    </div>
+                    <div class="card-title"><span class="icon">${exp.icon}</span> ${exp.title}</div>
                     <div class="card-org">${exp.org}</div>
-                    <ul>
-                        ${exp.points.map(p => `<li>${p}</li>`).join('')}
-                    </ul>
+                    <ul>${exp.points.map(p => `<li>${p}</li>`).join('')}</ul>
                 </div>
             `).join('');
         }
-
         function renderSkills() {
-            const container = document.getElementById('skillsWrapper');
             const groups = [
                 { title: '语言能力', data: resume.skills.languages },
                 { title: '工具熟练度', data: resume.skills.tools },
                 { title: '核心素养', data: resume.skills.competencies }
             ];
-
             let html = '';
             groups.forEach(g => {
-                html += `
-                    <div class="skills-group">
-                        <h5>${g.title}</h5>
-                        ${g.data.map(s => `
-                            <div class="skill-row">
-                                <span class="skill-name">${s.name}</span>
-                                <div class="skill-bar">
-                                    <div class="fill" style="width: ${s.level}%;"></div>
-                                </div>
-                                <span class="skill-label">${s.level}%</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
+                html += `<div class="skills-group"><h5>${g.title}</h5>`;
+                g.data.forEach(s => {
+                    html += `<div class="skill-row"><span class="skill-name">${s.name}</span><div class="skill-bar"><div class="fill" style="width:${s.level}%;"></div></div><span class="skill-label">${s.level}%</span></div>`;
+                });
+                html += `</div>`;
             });
-            container.innerHTML = html;
+            document.getElementById('skillsWrapper').innerHTML = html;
         }
-
         function renderInterests() {
-            const container = document.getElementById('interestsTags');
-            container.innerHTML = resume.interests.map(t =>
-                `<span class="tag">${t}</span>`
-            ).join('');
+            document.getElementById('interestsTags').innerHTML = resume.interests.map(t => `<span class="tag">${t}</span>`).join('');
         }
-
         function renderCertificates() {
+            const icons = ['🏅','🌿','🔬','✍️'];
             const container = document.getElementById('certsGrid');
-            const icons = ['🏅', '🌿', '🔬', '✍️'];
-
             container.innerHTML = resume.certificates.map((cert, idx) => {
                 const icon = icons[idx % icons.length];
                 const isAi = cert.images && cert.images.length >= 2;
                 const hasImages = cert.images && cert.images.length > 0;
-
                 let photoHtml = '';
                 if (hasImages) {
                     if (isAi) {
-                        photoHtml = `
-                            <div class="photo-3d-wrapper">
-                                <div class="photo-3d">
-                                    ${cert.images.map(src => `<img src="${src}" alt="${cert.name}" loading="lazy" />`).join('')}
-                                </div>
-                            </div>
-                        `;
+                        photoHtml = `<div class="photo-3d-wrapper"><div class="photo-3d">${cert.images.map(src => `<img src="${src}" alt="${cert.name}" loading="lazy" />`).join('')}</div></div>`;
                     } else {
-                        photoHtml = `
-                            <div class="photo-single">
-                                <img src="${cert.images[0]}" alt="${cert.name}" loading="lazy" />
-                            </div>
-                        `;
+                        photoHtml = `<div class="photo-single"><img src="${cert.images[0]}" alt="${cert.name}" loading="lazy" /></div>`;
                     }
                 }
-
                 return `
-                    <div class="cert-item" data-cert-index="${idx}">
-                        <div class="cert-header">
-                            <div class="icon">${icon}</div>
-                            <div class="info">
-                                <div class="name">${cert.name}</div>
-                                <div class="source">${cert.source}</div>
-                            </div>
-                        </div>
-                        ${hasImages ? `
-                            <button class="view-photos-btn" data-target="photo-${idx}" aria-expanded="false">
-                                📷 查看照片
-                                <span class="arrow">▼</span>
-                            </button>
-                            <div class="photo-container" id="photo-${idx}">
-                                ${photoHtml}
-                            </div>
-                        ` : ''}
+                    <div class="cert-item">
+                        <div class="cert-header"><div class="icon">${icon}</div><div class="info"><div class="name">${cert.name}</div><div class="source">${cert.source}</div></div></div>
+                        ${hasImages ? `<button class="view-photos-btn" data-target="photo-${idx}" aria-expanded="false">📷 查看照片 <span class="arrow">▼</span></button><div class="photo-container" id="photo-${idx}">${photoHtml}</div>` : ''}
                     </div>
                 `;
             }).join('');
-
-            // 绑定点击事件
             document.querySelectorAll('.view-photos-btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     e.stopPropagation();
-                    const targetId = this.dataset.target;
-                    const container = document.getElementById(targetId);
-                    if (!container) return;
-
-                    const isOpen = container.classList.contains('open');
+                    const target = document.getElementById(this.dataset.target);
+                    if (!target) return;
+                    const isOpen = target.classList.contains('open');
                     if (isOpen) {
-                        container.classList.remove('open');
+                        target.classList.remove('open');
                         this.classList.remove('open');
                         this.setAttribute('aria-expanded', 'false');
                         this.innerHTML = '📷 查看照片 <span class="arrow">▼</span>';
                     } else {
                         document.querySelectorAll('.photo-container.open').forEach(el => {
-                            if (el.id !== targetId) {
+                            if (el.id !== target.id) {
                                 el.classList.remove('open');
-                                const relatedBtn = document.querySelector(
-                                    `.view-photos-btn[data-target="${el.id}"]`);
-                                if (relatedBtn) {
-                                    relatedBtn.classList.remove('open');
-                                    relatedBtn.setAttribute('aria-expanded', 'false');
-                                    relatedBtn.innerHTML = '📷 查看照片 <span class="arrow">▼</span>';
-                                }
+                                const btn2 = document.querySelector(`.view-photos-btn[data-target="${el.id}"]`);
+                                if (btn2) { btn2.classList.remove('open'); btn2.setAttribute('aria-expanded','false'); btn2.innerHTML = '📷 查看照片 <span class="arrow">▼</span>'; }
                             }
                         });
-                        container.classList.add('open');
+                        target.classList.add('open');
                         this.classList.add('open');
                         this.setAttribute('aria-expanded', 'true');
                         this.innerHTML = '📷 收起照片 <span class="arrow">▲</span>';
@@ -2072,20 +1867,10 @@
         //  复制微信号
         // ================================================================
         function copyWechat() {
-            const wechat = resume.contact.wechat;
-            navigator.clipboard.writeText(wechat).then(() => {
-                showToast('✅ 微信号已复制！');
-            }).catch(() => {
-                const input = document.createElement('input');
-                input.value = wechat;
-                document.body.appendChild(input);
-                input.select();
-                document.execCommand('copy');
-                document.body.removeChild(input);
-                showToast('✅ 微信号已复制！');
-            });
+            const w = resume.contact.wechat;
+            navigator.clipboard.writeText(w).then(() => showToast('✅ 微信号已复制！'))
+                .catch(() => { const i = document.createElement('input'); i.value = w; document.body.appendChild(i); i.select(); document.execCommand('copy'); document.body.removeChild(i); showToast('✅ 微信号已复制！'); });
         }
-
         function showToast(msg) {
             const t = document.getElementById('toast');
             t.textContent = msg;
@@ -2095,17 +1880,32 @@
         }
 
         // ================================================================
-        //  AI 助手逻辑
+        //  侧边栏 AI 交互
         // ================================================================
-        (function initAI() {
-            const toggle = document.getElementById('aiToggle');
-            const chatbox = document.getElementById('aiChatbox');
-            const closeBtn = document.getElementById('aiClose');
-            const input = document.getElementById('aiInput');
-            const sendBtn = document.getElementById('aiSend');
-            const messages = document.getElementById('aiMessages');
+        (function initSidebarAI() {
+            const floatBtn = document.getElementById('ai-float-btn');
+            const sidebar = document.getElementById('ai-sidebar');
+            const closeBtn = document.getElementById('ai-close-btn');
+            const overlay = document.getElementById('ai-overlay');
+            function openSidebar() { sidebar.classList.add('active'); overlay.classList.add('active'); floatBtn.style.display = 'none'; }
+            function closeSidebar() { sidebar.classList.remove('active'); overlay.classList.remove('active'); setTimeout(() => { floatBtn.style.display = 'flex'; }, 300); }
+            floatBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sidebar.classList.contains('active')) closeSidebar(); });
+        })();
 
-            // 简单的关键词回复
+        // ================================================================
+        //  萌宠 AI 交互 (左下角)
+        // ================================================================
+        (function initPetAI() {
+            const toggle = document.getElementById('petToggle');
+            const chatbox = document.getElementById('petChatbox');
+            const closeBtn = document.getElementById('petClose');
+            const input = document.getElementById('petInput');
+            const sendBtn = document.getElementById('petSend');
+            const messages = document.getElementById('petMessages');
+
             const responses = {
                 '你好': '你好呀！我是小紫，很高兴认识你 😊',
                 '你是谁': '我是小紫，你的智能助手，随时为你解答问题～',
@@ -2117,62 +1917,41 @@
                 '谢谢': '不客气！有需要随时找我 💜',
                 '默认': '这个问题我还不太清楚，你可以试着问我关于简历、学校、兴趣等方面的问题～'
             };
-
             function getBotReply(text) {
                 const lower = text.toLowerCase();
                 for (let key in responses) {
-                    if (lower.includes(key)) {
-                        return responses[key];
-                    }
+                    if (lower.includes(key)) return responses[key];
                 }
                 return responses['默认'];
             }
-
             function addMessage(content, type) {
                 const div = document.createElement('div');
-                div.className = `ai-msg ${type}`;
+                div.className = `pet-msg ${type}`;
                 div.textContent = content;
                 messages.appendChild(div);
                 messages.scrollTop = messages.scrollHeight;
             }
-
             function handleSend() {
                 const text = input.value.trim();
                 if (!text) return;
                 addMessage(text, 'user');
                 input.value = '';
-                // 模拟回复延迟
                 setTimeout(() => {
                     const reply = getBotReply(text);
                     addMessage(reply, 'bot');
                 }, 300);
             }
-
             toggle.addEventListener('click', () => {
                 const isOpen = chatbox.classList.contains('open');
-                if (isOpen) {
-                    chatbox.classList.remove('open');
-                } else {
-                    chatbox.classList.add('open');
-                }
+                if (isOpen) chatbox.classList.remove('open');
+                else chatbox.classList.add('open');
             });
-
-            closeBtn.addEventListener('click', () => {
-                chatbox.classList.remove('open');
-            });
-
+            closeBtn.addEventListener('click', () => chatbox.classList.remove('open'));
             sendBtn.addEventListener('click', handleSend);
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    handleSend();
-                }
-            });
-
-            // 点击外部可以关闭（可选）
+            input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); handleSend(); } });
             document.addEventListener('click', (e) => {
-                const assistant = document.getElementById('aiAssistant');
-                if (!assistant.contains(e.target) && chatbox.classList.contains('open')) {
+                const pet = document.getElementById('aiPet');
+                if (!pet.contains(e.target) && chatbox.classList.contains('open')) {
                     chatbox.classList.remove('open');
                 }
             });
@@ -2181,60 +1960,31 @@
         // ================================================================
         //  THEME TOGGLE
         // ================================================================
-        function getTheme() {
-            return document.documentElement.getAttribute('data-theme') || 'light';
-        }
-
+        function getTheme() { return document.documentElement.getAttribute('data-theme') || 'light'; }
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             updateThemeIcon(theme);
         }
-
         function updateThemeIcon(theme) {
             const icon = document.getElementById('themeIcon');
             if (theme === 'dark') {
-                icon.innerHTML =
-                    `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />`;
+                icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />`;
             } else {
-                icon.innerHTML =
-                    `<circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />`;
+                icon.innerHTML = `<circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />`;
             }
         }
-
-        function toggleTheme() {
-            const current = getTheme();
-            const next = current === 'light' ? 'dark' : 'light';
-            setTheme(next);
-        }
+        function toggleTheme() { const current = getTheme(); setTheme(current === 'light' ? 'dark' : 'light'); }
 
         // ================================================================
-        //  PRINT
+        //  PRINT, SCROLL TOP, MOBILE NAV
         // ================================================================
-        function handlePrint() {
-            window.print();
-        }
-
-        // ================================================================
-        //  SCROLL TOP
-        // ================================================================
+        function handlePrint() { window.print(); }
         function initScrollTop() {
             const btn = document.getElementById('scrollTop');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    btn.classList.add('visible');
-                } else {
-                    btn.classList.remove('visible');
-                }
-            });
-            btn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+            window.addEventListener('scroll', () => { if (window.scrollY > 300) btn.classList.add('visible'); else btn.classList.remove('visible'); });
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
-
-        // ================================================================
-        //  MOBILE NAV
-        // ================================================================
         function initMobileNav() {
             const toggle = document.getElementById('navToggle');
             const links = document.getElementById('navLinks');
@@ -2264,7 +2014,6 @@
             renderInterests();
             renderCertificates();
 
-            // 复制微信号
             document.getElementById('copyWechatBtn').addEventListener('click', copyWechat);
             document.getElementById('footerWechat')?.addEventListener('click', copyWechat);
             document.getElementById('footerWechat')?.style.setProperty('cursor', 'pointer');
@@ -2273,9 +2022,7 @@
             const saved = localStorage.getItem('theme') || 'light';
             setTheme(saved);
             document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-
             document.getElementById('printBtn').addEventListener('click', handlePrint);
-
             initScrollTop();
             initMobileNav();
         });
